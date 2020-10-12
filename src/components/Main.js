@@ -1,8 +1,7 @@
 import React from 'react';
 
 function Main() {
-    return <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    return <p>Esta es una descriptción!</p>
 }
 
 export default Main;

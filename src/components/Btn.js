@@ -1,7 +1,8 @@
 import React from 'react';
 
 function Btn(){
-    return <button href="#">Ir a CODERHOUSE</button>
-}
 
+    return <button ><a href="https://www.coderhouse.com">Ir a CODERHOUSE</a></button>
+
+}
 export default Btn;
