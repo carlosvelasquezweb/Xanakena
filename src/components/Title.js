@@ -1,7 +1,9 @@
 import React from 'react';
-
-function Title(){
-    return <h1>Este es el titulo</h1>
+import './Title.css';
+function Title() {
+    return <>
+        <h1>XANAKENA - SHOP</h1>
+    </>
 }
 
 export default Title;
