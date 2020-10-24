@@ -2,8 +2,8 @@ import React from 'react';
 import './NavBar.css';
 
 function NavBar() {
-    return <div className="navbar">
-            <a><i className="fi fi-shopping-basket"></i></a>
+    return <>
+            
             <a href="#contact">Contactanos</a>
             <div className="subnav">
                 <button className="subnavbtn">Nosotros</button>
@@ -11,7 +11,7 @@ function NavBar() {
             <div className="subnav">
                 <button className="subnavbtn">Productos</button>
             </div>
-        </div>
+        </>
   
 }
 

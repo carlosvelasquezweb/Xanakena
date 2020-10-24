@@ -8,10 +8,15 @@ import CartIcon from './components/CartIcon';
 function App() {
 
   return <>
-    <NavBar />
-    <ItemListContainer name="Productos Xanakena"><CartIcon/>
-    </ItemListContainer>
-    
+
+    <div className="navbar">
+
+      <div className="subnav">
+        <CartIcon />
+      </div>
+      <NavBar />
+    </div>
+    <ItemListContainer name="Productos Xanakena" />
   </>
 }
 
