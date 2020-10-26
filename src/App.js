@@ -11,7 +11,7 @@ function App() {
   return <>
     <NavBar />
     <ItemListContainer name="Productos Xanakena" />
-    <ItemCount stock="5" initial="1"/>
+    <ItemCount stock="10" initial="1"/>
   </>
 }
 
