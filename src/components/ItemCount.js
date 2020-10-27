@@ -1,33 +1,46 @@
 import React, { useState } from 'react';
 
+
 function ItemCount({ initial, stock }) {
   const [count, setCount] = useState(Number(initial));
 
   return (
-    <div>
-      <button onClick={
-        () => {
-          if (stock > count) {
-            setCount(count + 1)
-          }
-        }
-      }>
-        +
+    <div className="container">
+      <div className="row">
+        <div className="two columns">
+          <button className="u-full-width" onClick={
+            () => {
+              if (stock > count) {
+                setCount(count + 1)
+              }
+            }
+          }>
+            +
       </button>
-      <p>Productos: {count}</p>
-      <button onClick={
-        () => {
-          if (count > 0) {
-            setCount(count - 1)
-          } else {
-            return false
-          }
-        }
-      }>
-        -
+        </div>
+        <div className="one columns">
+          <p className="text-center">{count}</p>
+        </div>
+        <div className="two columns">
+          <button className="u-full-width" onClick={
+            () => {
+              if (count > 0) {
+                setCount(count - 1)
+              } else {
+                return false
+              }
+            }
+          }>
+            -
       </button>
-      <br/>
-      <button onClick={()=>{if(count <= 0){alert("No hay items seleccionados!")}else{alert("Items en el carrito: " + count)}}}>¡Agregar al carrito!</button>
+        </div></div>
+      <div className="row">
+        <div className="five columns">
+          <button className="u-full-width" onClick={() => { if (count <= 0) { alert("No hay items seleccionados!") } else { alert("Items en el carrito: " + count) } }}>¡Agregar al carrito!</button>
+        </div>
+      </div>
+
+      <hr />
     </div>
   );
 }

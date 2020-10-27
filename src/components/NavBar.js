@@ -7,10 +7,10 @@ function NavBar() {
         <CartIcon />
         <a href="#contact">Contactanos</a>
         <div className="subnav">
-            <button className="subnavbtn">Nosotros</button>
+            <a className="subnavbtn">Nosotros</a>
         </div>
         <div className="subnav">
-            <button className="subnavbtn">Productos</button>
+            <a className="subnavbtn">Productos</a>
         </div>
     </div>
     </>
