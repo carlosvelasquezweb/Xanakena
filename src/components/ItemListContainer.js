@@ -10,10 +10,10 @@ function ItemListContainer(props) {
             <h2 className="text-center">{props.name}</h2>
         </div><hr />
         <div className="row">
-            <p>Producto #1 <ItemCount stock="10" initial="1" /></p>
-            <p>Producto #2  <ItemCount stock="10" initial="1" /></p>
-            <p>Producto #3  <ItemCount stock="10" initial="1" /></p>
-            <p>Producto #4  <ItemCount stock="10" initial="1" /></p>
+            <p>Producto #1</p> <ItemCount stock="10" initial="0" />
+            <p>Producto #2 </p> <ItemCount stock="10" initial="0" />
+            <p>Producto #3 </p> <ItemCount stock="10" initial="0" />
+            <p>Producto #4  </p><ItemCount stock="10" initial="0" />
         </div>
     </div>
 
