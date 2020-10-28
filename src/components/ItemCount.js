@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
 
-function ItemCount({ initial, stock }) {
-  const [count, setCount] = useState(Number(initial));
 
+function ItemCount({ initial, stock, onAdd }) {
+  const [count, setCount] = useState(Number(initial));
+function onAdd(count){
+   if (count <= 0)
+    { 
+      alert("No hay items seleccionados!") 
+    }
+     else { alert("Items en el carrito: " + count) } };
   return (
     <div className="container">
       <div className="row">
@@ -36,7 +42,7 @@ function ItemCount({ initial, stock }) {
         </div></div>
       <div className="row">
         <div className="five columns">
-          <button className="u-full-width" onClick={() => { if (count <= 0) { alert("No hay items seleccionados!") } else { alert("Items en el carrito: " + count) } }}>¡Agregar al carrito!</button>
+          <button className="u-full-width" onClick={()=> onAdd(count)}>¡Agregar al carrito!</button>
         </div>
       </div>
 
