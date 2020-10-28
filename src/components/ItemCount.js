@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 
 
-
-function ItemCount({ initial, stock, onAdd }) {
+function ItemCount({initial, stock, onAdd}) {
   const [count, setCount] = useState(Number(initial));
-function onAdd(count){
-   if (count <= 0)
-    { 
-      alert("No hay items seleccionados!") 
-    }
-     else { alert("Items en el carrito: " + count) } };
+
   return (
     <div className="container">
       <div className="row">
