@@ -8,21 +8,7 @@ function ItemCount({initial, stock, onAdd}) {
     <div className="container">
       <div className="row">
         <div className="two columns">
-          <button className="u-full-width" onClick={
-            () => {
-              if (stock > count) {
-                setCount(count + 1)
-              }
-            }
-          }>
-            +
-      </button>
-        </div>
-        <div className="one columns">
-          <p className="text-center">{count}</p>
-        </div>
-        <div className="two columns">
-          <button className="u-full-width" onClick={
+        <button className="u-full-width" onClick={
             () => {
               if (count > 0) {
                 setCount(count - 1)
@@ -33,6 +19,22 @@ function ItemCount({initial, stock, onAdd}) {
           }>
             -
       </button>
+       </div>
+        <div className="one columns">
+          <p className="text-center">{count}</p>
+        </div>
+        <div className="two columns">
+      
+        <button className="u-full-width" onClick={
+            () => {
+              if (stock > count) {
+                setCount(count + 1)
+              }
+            }
+          }>
+            +
+      </button>
+         
         </div></div>
       <div className="row">
         <div className="five columns">
