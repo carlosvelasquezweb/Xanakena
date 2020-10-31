@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 
-function ItemCount({initial, stock, onAdd}) {
+function ItemCount({ initial, stock, onAdd }) {
   const [count, setCount] = useState(Number(initial));
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row ">
         <div className="two columns">
-        <button className="u-full-width" onClick={
+          <a className=" button button-primary u-full-width" onClick={
             () => {
               if (count > 0) {
                 setCount(count - 1)
@@ -18,14 +18,14 @@ function ItemCount({initial, stock, onAdd}) {
             }
           }>
             -
-      </button>
-       </div>
+      </a>
+        </div>
         <div className="one columns">
           <p className="text-center">{count}</p>
         </div>
         <div className="two columns">
-      
-        <button className="u-full-width" onClick={
+
+          <a className="button button-primary u-full-width" onClick={
             () => {
               if (stock > count) {
                 setCount(count + 1)
@@ -33,12 +33,12 @@ function ItemCount({initial, stock, onAdd}) {
             }
           }>
             +
-      </button>
-         
+      </a>
+
         </div></div>
       <div className="row">
         <div className="five columns">
-          <button className="u-full-width" onClick={()=> onAdd(count)}>¡Agregar al carrito!</button>
+          <a className="button button-primary u-full-width" onClick={() => onAdd(count)}>¡Agregar al carrito!</a>
         </div>
       </div>
 
