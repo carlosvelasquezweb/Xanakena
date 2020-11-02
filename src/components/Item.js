@@ -15,7 +15,9 @@ function Item(props) {
     <div className="row">
       <div className="twelve columns">
         <h3>{props.nombre}</h3>
+        {/*No puedo mostrar la imagen*/}
         <img src={props.img} />
+        
         <p>{props.descripcion}</p>
      
         <ItemCount stock="10" initial="0" onAdd={onAdd} /> 
