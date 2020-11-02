@@ -7,12 +7,12 @@ import ItemCount from './components/ItemCount';
 
 function App() {
 
-  return <><NavBar/>
-  <div className="container">
-    
+  return <> 
+  <NavBar/>
+  <br></br>
     <ItemListContainer name="Productos Xanakena" />
  
-  </div></>
+  </>
 }
 
 export default App;

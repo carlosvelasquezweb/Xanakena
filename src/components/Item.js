@@ -11,21 +11,14 @@ function Item(props) {
     }
   }
 
-  return <div className="container">
-    <div className="row">
-      <div className="twelve columns">
-        <h3>{props.nombre}</h3>
-        {/*No puedo mostrar la imagen*/}
-        <img src={props.img} />
-        
-        <p>{props.descripcion}</p>
-     
-        <ItemCount stock="10" initial="0" onAdd={onAdd} /> 
-          <hr/>
-      </div>
-    </div>
-  </div>
-
+  return <>    
+    <h3 className="u-full-width">{props.nombre}</h3>
+    <img className="u-full-width" src={props.img} title={props.nombre}/>
+    <p className="u-full-width">{props.descripcion}</p>
+    
+    <ItemCount stock="10" initial="0" onAdd={onAdd} />
+</>
+ 
 }
 
 export default Item;
