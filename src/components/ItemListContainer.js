@@ -14,7 +14,7 @@ const promesa = new Promise((resolved) => {
 
 function ItemListContainer(props) {
 
-    const Producto = [Productos, setProductos] = useState([])
+    const Productos = [Productos, setProductos] = useState([])
 
     useEffect(() => {
         promesa.then(Productos => {
@@ -29,7 +29,7 @@ function ItemListContainer(props) {
             <h2 className="text-center">{props.name}</h2>
         </div>
         <div className="row">
-            <p><ItemList listado={Producto} /></p>
+            <p><ItemList listado={Productos} /></p>
 
         </div>
     </div>
