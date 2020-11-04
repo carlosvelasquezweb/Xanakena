@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function ItemCount({ initial, stock, onAdd }) {
   const [count, setCount] = useState(Number(initial));
-
+  
   return (<>
     
 <a className="button u-pull-left">{count}</a>
