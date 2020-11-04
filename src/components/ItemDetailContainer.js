@@ -11,7 +11,7 @@ const promesa = new Promise((resolved) => {
         stock: "25",
         img: "./images/blazer.jpg",
       } ]);
-  }, 2000);
+  }, 3000);
 });
 
 function ItemDetailContainer(props) {

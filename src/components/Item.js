@@ -9,7 +9,6 @@ function Item(props) {
       <img className="u-full-width" src={props.img} title={props.nombre} />
       <p className="u-full-width">{props.descripcion}</p>
 
-      
     </>
   );
 }

@@ -9,10 +9,11 @@ import CartIcon from "./components/CartIcon";
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar />  <ItemDetailContainer />
       <br></br>
       <ItemListContainer name="Productos Xanakena" />
-      <ItemDetailContainer />
+      <hr></hr>
+    
     </>
   );
 }

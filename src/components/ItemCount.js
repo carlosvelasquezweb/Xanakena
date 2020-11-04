@@ -29,7 +29,8 @@ function ItemCount({ initial, stock, onAdd }) {
       -
       </a>
      
-    <a className="button button-primary u-full-width" onClick={() => onAdd(count)}>¡Agregar al carrito!</a>
+    <a className="button u-full-width" onClick={() => onAdd(count)}>¡Agregar al carrito!</a>
+    <a className="button button-primary  u-full-width" onClick={() => alert("Aun no tenemos esta funcionalidad")}>Comprar</a>
 <hr/>
   </>
   );
