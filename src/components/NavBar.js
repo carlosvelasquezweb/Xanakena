@@ -1,16 +1,17 @@
 import React from 'react';
 import './NavBar.css';
 import CartIcon from './CartIcon';
+import {Link} from 'react-router-dom'
 
 function NavBar() {
     return <><div className="navbar">
         <CartIcon />
-        <a href="#contact">Contactanos</a>
+        <Link to="/">Contactanos</Link>
         <div className="subnav">
-            <a className="subnavbtn">Nosotros</a>
+            <Link to="/" className="subnavbtn">Nosotros</Link>
         </div>
         <div className="subnav">
-            <a className="subnavbtn">Productos</a>
+            <Link to="/" className="subnavbtn">Productos</Link>
         </div>
     </div>
     </>

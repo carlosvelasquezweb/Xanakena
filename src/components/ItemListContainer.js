@@ -5,13 +5,14 @@ const promesa = new Promise((resolved) => {
   setTimeout(() => {
     resolved([
       {
+        id:"001",
         nombre: "Blazer",
         descripcion:
           "Blazer ligera de cuello y solapas de pico. Manga larga acabada en puño con detalle de botones. Bolsillos de vivo en pecho y cadera. Detalle bolsillo interior.",
         stock: "25",
         img: "./images/blazer.jpg",
       },
-      {
+      {id:"002",
         nombre: "Pantalon Lino",
         descripcion:
           "Este lino se cultiva de forma natural, sin riego artificial y no usa semillas modificadas genéticamente ni defoliantes. Su producción se realiza en Europa siguiendo el estándar de European Flax® de European Confederation of Flax and Hemp (CELC).",
@@ -19,6 +20,7 @@ const promesa = new Promise((resolved) => {
         img: "./images/bermuda.jpg",
       },
       {
+        id:"003",
         nombre: "Bañador Estampado ",
         descripcion:
           "Bañador estampado con efecto lavado. Confeccionado en tejido de origen reciclado y secado rápido, con protección",
