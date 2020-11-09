@@ -12,8 +12,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-       
-         <Route exact path="/">
+        <Route exact path="/">
           <ItemListContainer name="Productos Xanakena" />
         </Route>
         <Route path="/item/:id">
