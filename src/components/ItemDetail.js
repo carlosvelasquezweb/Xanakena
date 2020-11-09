@@ -12,11 +12,11 @@ function onAdd(cantidad) {
 
 function ItemDetail(props) {
   const key = props.producto;
-  console.log(key);
+  console.log(key[0].id);
   // console.info(producto.id);
 
   return <>
-    <p>{key.id}</p>
+  
 
     <ItemCount stock="10" initial="0" onAdd={onAdd} />
   </>;
