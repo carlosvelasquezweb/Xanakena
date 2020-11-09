@@ -7,6 +7,7 @@ function ItemList(props) {
   return productos.map((producto, index) => (
     <div className="one-half column">
       <Item
+      id={producto.id}
         nombre={producto.nombre}
         descripcion={producto.descripcion}
         img={producto.img}
