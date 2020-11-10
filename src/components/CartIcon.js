@@ -1,7 +1,14 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-function CartIcon(){
-    return <a><i className="fi fi-shopping-basket"></i></a>
+function CartIcon() {
+  return (
+    <>
+      <Link to={"/cart"}>
+        <i className="fi fi-shopping-basket"></i>
+      </Link>
+    </>
+  );
 }
 
 export default CartIcon;

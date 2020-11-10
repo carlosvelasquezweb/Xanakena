@@ -7,8 +7,8 @@ function Item({id, nombre, descripcion, img }) {
   return (
     <>
       <h3 className="u-full-width">{nombre}</h3>
-      <Link to={`/item/${id}`}> <img className="u-full-width" src={img} title={nombre} /></Link>
-      <p className="u-full-width">{descripcion}</p>
+      <Link to={`/item/${id}`}> <img className="u-full-width" src={img} title={nombre} style={{width:"250px", textAlign:"center"}}/></Link>
+      
 
     </>
   );

@@ -12,7 +12,7 @@ const getProduct = (id) => {
           descripcion:
             "Blazer ligera de cuello y solapas de pico. Manga larga acabada en puño con detalle de botones. Bolsillos de vivo en pecho y cadera. Detalle bolsillo interior.",
           stock: "25",
-          img: "./images/blazer.jpg",
+          img: "../images/blazer.jpg",
         },
         {
           id: "002",
@@ -20,7 +20,7 @@ const getProduct = (id) => {
           descripcion:
             "Este lino se cultiva de forma natural, sin riego artificial y no usa semillas modificadas genéticamente ni defoliantes. Su producción se realiza en Europa siguiendo el estándar de European Flax® de European Confederation of Flax and Hemp (CELC).",
           stock: "30",
-          img: "./images/bermuda.jpg",
+          img: "../images/bermuda.jpg",
         },
         {
           id: "003",
@@ -28,7 +28,7 @@ const getProduct = (id) => {
           descripcion:
             "Bañador estampado con efecto lavado. Confeccionado en tejido de origen reciclado y secado rápido, con protección",
           stock: "25",
-          img: "./images/banador-clasico-estampado.png",
+          img: "../images/banador-clasico-estampado.png",
         },
       ];
       res(item.filter((item) => item.id == id));
@@ -54,8 +54,8 @@ function ItemDetailContainer(props) {
         <hr></hr>
       </div>
       <div className="row">
+      {item.length > 0 && <ItemDetail producto={item} />}
        
-        <ItemDetail producto={item} />
       </div>
     </div>
   );

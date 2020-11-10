@@ -11,15 +11,26 @@ function onAdd(cantidad) {
 }
 
 function ItemDetail(props) {
-  const key = props.producto;
-  console.log(key[0].id);
-  // console.info(producto.id);
+  const key = props.producto[0];
+const ruta = key.img
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="six columns">
+          <h2>{key.nombre}</h2>
+         <img src={ruta} style={{width: "150px"}}/> 
+          <p>{key.descripcion}</p>
+         
+        </div>
 
-  return <>
-  
-
-    <ItemCount stock="10" initial="0" onAdd={onAdd} />
-  </>;
+        <div className="five columns">
+          <br></br>
+          <br></br>
+          <ItemCount stock="10" initial="0" onAdd={onAdd} />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default ItemDetail;
