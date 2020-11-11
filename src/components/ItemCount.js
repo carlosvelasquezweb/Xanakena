@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
+
 function ItemCount({ initial, stock, onAdd }) {
   const [count, setCount] = useState(Number(initial));
 
   return (
-    <>
+    <div id="itemcontador">
       <a className="button u-pull-left">{count}</a>
       <a
         className="button button-primary u-pull-right"
@@ -20,7 +21,8 @@ function ItemCount({ initial, stock, onAdd }) {
       <a
         className=" button  u-pull-right"
         onClick={() => {
-          if (count > 0) {
+       
+          if (count > 1) {
             setCount(count - 1);
           } else {
             return false;
@@ -30,17 +32,10 @@ function ItemCount({ initial, stock, onAdd }) {
         -
       </a>
 
-      <a className="button u-full-width" onClick={() => onAdd(count)}>
-        ¡Agregar al carrito!
-      </a>
-      <a
-        className="button button-primary  u-full-width"
-        onClick={() => alert("Aun no tenemos esta funcionalidad")}
-      >
-        Comprar
-      </a>
-      <hr />
-    </>
+      <button className="button u-full-width" onClick={() => onAdd(count)}>
+        Agregar al carrito
+      </button>
+    </div>
   );
 }
 
