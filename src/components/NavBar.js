@@ -3,7 +3,7 @@ import './NavBar.css';
 import CartIcon from './CartIcon';
 import {Link} from 'react-router-dom'
 
-function NavBar() {
+const NavBar = () => {
     return <><div className="navbar">
         <CartIcon />
         <Link to="/">Contactanos</Link>

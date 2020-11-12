@@ -3,23 +3,30 @@ import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount.js";
 import Item from "./Item.js";
 
-function ItemDetail(props) {
+// const Finalizar = (props) => {
+//   const style = {
+//     display: "",
+//   };
+  
+//   return (
+    
+//       <button style={style}>
+//         {props.text} {props.cantidad}
+//       </button>
+//     </Link>
+//   );
+// };
+
+const ItemDetail = (props) => {
   const [total, setTotal] = useState(null);
 
-  function Finalizar(props) {
-    return (
-      <Link to="/cart/">
-        <button>Finalizar Compra {props.total}</button>
-      </Link>
-    );
-  }
+  const onAdd = (cant) => {
+    setTotal(cant);
 
-  function onAdd(cantidad) {
-    setTotal(cantidad);
+    document.getElementById("itemcontador").innerHTML = `Finalizar compra`;
+    document.getElementById("mostrar").innerHTML = "<Link to='/cart/'><button style={{display:'hidden'}}>Finalizar Compra " + cant + "</button></Link>";
 
-    document.getElementById("itemcontador").innerHTML =
-      'Presiona "finalizar Compra" para ir al carrito';
-  }
+  };
   // console.log("Este es mi estado: " + total);
 
   const key = props.producto[0];
@@ -37,13 +44,14 @@ function ItemDetail(props) {
           <br></br>
           <br></br>
           <ItemCount stock="10" initial="1" onAdd={onAdd} />
-          <div id="mostrar">
-            <Finalizar id="Finalizar" total={total} />
-          </div>
+  
+          <Link to={"/cart"}><p id="mostrar"></p></Link>
+            {/* <Finalizar text="Finalizar Compra" cantidad={total} /> */}
+        
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ItemDetail;

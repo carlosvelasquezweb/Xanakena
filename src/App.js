@@ -8,7 +8,7 @@ import Cart from "./components/Cart";
 import CartIcon from "./components/CartIcon";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
