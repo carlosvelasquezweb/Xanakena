@@ -31,7 +31,7 @@ const getProduct = (id) => {
           img: "../images/banador-clasico-estampado.png",
         },
       ];
-      res(item.filter((item) => item.id == id));
+      res(item.filter((item) => item.id === id));
     }, 3000);
   });
 };

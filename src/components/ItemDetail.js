@@ -1,33 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount.js";
 import Item from "./Item.js";
-
-// const Finalizar = (props) => {
-//   const style = {
-//     display: "",
-//   };
-  
-//   return (
-    
-//       <button style={style}>
-//         {props.text} {props.cantidad}
-//       </button>
-//     </Link>
-//   );
-// };
+import Cart from "./Cart.js";
+import { CartContext } from "../context/CartContext";
 
 const ItemDetail = (props) => {
+  const { add } = useContext(CartContext);
   const [total, setTotal] = useState(null);
 
   const onAdd = (cant) => {
     setTotal(cant);
 
     document.getElementById("itemcontador").innerHTML = `Finalizar compra`;
-    document.getElementById("mostrar").innerHTML = "<Link to='/cart/'><button style={{display:'hidden'}}>Finalizar Compra " + cant + "</button></Link>";
-
+    document.getElementById("mostrar").innerHTML =
+      "<Link to='/cart/'><button onClick={add(cant)} style={{display:'hidden'}}>Finalizar Compra " +
+      cant +
+      " unidades</button></Link>";
   };
-  // console.log("Este es mi estado: " + total);
+  console.log("Este es mi estado: " + total);
 
   const key = props.producto[0];
   const ruta = key.img;
@@ -44,10 +35,10 @@ const ItemDetail = (props) => {
           <br></br>
           <br></br>
           <ItemCount stock="10" initial="1" onAdd={onAdd} />
-  
-          <Link to={"/cart"}><p id="mostrar"></p></Link>
-            {/* <Finalizar text="Finalizar Compra" cantidad={total} /> */}
-        
+
+          <Link to={"/cart"}>
+            <p id="mostrar"></p>
+          </Link>
         </div>
       </div>
     </div>
