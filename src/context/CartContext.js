@@ -1,14 +1,16 @@
 import React, { useContext, useState } from "react";
 
-export const CartContext = React.createContext(); 
+export const CartContext = React.createContext();
 
-export function ListProvider({ defaultValue, children, element}) {
+export function ListProvider({ defaultValue, children }) {
+  const [list, setList] = useState([]);
 
-  const [list, setList] = useState([]); 
-
-  function add() {
-    // agrega un string a la lista
-    setList([...list, "Nuevo elemento" ]); 
+  function add(codigo, nombre, total) {
+    
+    const producto = { id: codigo, nombre: nombre, cantidad: total };
+    
+   setList([...list, producto]);
+    
   }
 
   function clean() {

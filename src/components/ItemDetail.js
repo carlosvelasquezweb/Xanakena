@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount.js";
-import Item from "./Item.js";
-import Cart from "./Cart.js";
 import { CartContext } from "../context/CartContext";
 
 const ItemDetail = (props) => {
@@ -11,17 +9,21 @@ const ItemDetail = (props) => {
 
   const onAdd = (cant) => {
     setTotal(cant);
+    
 
     document.getElementById("itemcontador").innerHTML = `Finalizar compra`;
     document.getElementById("mostrar").innerHTML =
-      "<Link to='/cart/'><button onClick={add(cant)} style={{display:'hidden'}}>Finalizar Compra " +
+      "<Link to='/cart/'><button style={{display:'hidden'}}>Finalizar Compra " +
       cant +
-      " unidades</button></Link>";
+      " unidades</button></Link>"; 
+       add(key.id,  key.nombre, cant);
   };
-  console.log("Este es mi estado: " + total);
 
+  console.log("Este es mi estado: " + total);
+  
   const key = props.producto[0];
   const ruta = key.img;
+  
   return (
     <div className="container">
       <div className="row">
